@@ -18,4 +18,15 @@ Spring Boot concepts
 - Other annotations:
   - @ResponseBody : is used when we have not defined jsp pages......strijng returned through method is shown on web page.
   - @ComponentScan : is used to gather all beans defined in the same package.
+
+- How to define paths to JSP pages : 
+  - Define following things in application.properties file
+    - spring.mvc.view.prefix : Path to Jsp page
+    - spring.mvc.view.suffix : .jsp
+ 
+ - General Architecture :
+   - com.in28min.springboot.web : Keep Spring boot Application class
+   - com.in28min.springboot.web.controller: Keep classes which supports web requests
+   - com.in28min.springboot.web.service : keep classes using the defined structure to implement business logic
+   - com.in28min.springboot.web.model  : Keep classes defining struture 
   
