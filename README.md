@@ -17,4 +17,5 @@ Spring Boot concepts
   
 - Other annotations:
   - @ResponseBody : is used when we have not defined jsp pages......strijng returned through method is shown on web page.
+  - @ComponentScan : is used to gather all beans defined in the same package.
   
