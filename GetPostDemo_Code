@@ -37,7 +37,7 @@ public class LoginController {
 		return "login";
 	}
 	
-		@RequestMapping(value="/login", method = RequestMethod.POST)
+	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String loginPost(ModelMap model,@RequestParam String name,@RequestParam String password){
 		
 		model.put("name", name);
@@ -45,7 +45,7 @@ public class LoginController {
 		if(password.equals("Kavita"))
 			return "welcome";
 		else
-			return "Password is incorrect!";
+			return "error";
 	}
 }
 
@@ -99,3 +99,23 @@ src\main\webapp\WEB-INF\jsp\welcome.jsp
 welcome ${name}</body>
 </html>
 -----------------------------------------------------
+
+
+-----------------------------------------------------
+\src\main\webapp\WEB-INF\jsp\error.jsp
+-----------------------------------------------------
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome Page</title>
+</head>
+<body>
+Something went wrong!
+ </body>
+</html>
+-----------------------------------------------------
+
+
