@@ -60,7 +60,7 @@ src\main\webapp\WEB-INF\jsp\login.jsp
 </head>
 
 <body>
-My First JSP!! Welcome!
+My First JSP!! Welcome ${name}!
 </body>
 
 </html>
@@ -115,6 +115,12 @@ pom.xml
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>4.6.1</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -130,5 +136,3 @@ pom.xml
 
 ---------------------------------------------
 
----------------------------------------------
----------------------------------------------
