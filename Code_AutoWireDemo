@@ -1,7 +1,7 @@
 ---------------------------------------------------------------
 BinarySearchImplmention.java
 ---------------------------------------------------------------
-package com.kk.FirstSpring;
+package com.spring.FirstSpring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,11 +12,6 @@ public class BinarySearchImplmention {
 	@Autowired
 	private Sort sort;
 	
-	/*public BinarySearchImplmention(Sort sort) {
-		this.sort = sort;
-	}*/
-	
-	
 	public void setSort(Sort sort) {
 		this.sort = sort;
 	}
@@ -25,12 +20,9 @@ public class BinarySearchImplmention {
 		int index = 4;
 		
 		numberArray = this.sort.sorting(numberArray);
-		
-		
-		
+				
 		return index;
 	}
-
 }
 
 ---------------------------------------------------------------
@@ -40,7 +32,7 @@ public class BinarySearchImplmention {
 ---------------------------------------------------------------
 FirstSpringApplication.java
 ---------------------------------------------------------------
-package com.kk.FirstSpring;
+package com.spring.FirstSpring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -54,15 +46,9 @@ public class FirstSpringApplication {
 		ConfigurableApplicationContext ApplContext = SpringApplication.run(FirstSpringApplication.class, args);
 		
 		BinarySearchImplmention binarySearchImpl = ApplContext.getBean(BinarySearchImplmention.class);
-		
-		
+				
 		int index = binarySearchImpl.binarySearch(new int[]{4,5,6,5}, 5);
-		System.out.println("Answer : "+index);
-		
-		
-		//BinarySearchImplmention bsi = new BinarySearchImplmention(new MergeSort());
-		//System.out.println("Answer"+bsi.binarySearch(new int[]{4,5,6,5}, 5));
-		
+		System.out.println("Answer : "+index);		
 	}
 
 }
@@ -72,7 +58,7 @@ public class FirstSpringApplication {
 ---------------------------------------------------------------
 MergeSort.java
 ---------------------------------------------------------------
-package com.kk.FirstSpring;
+package com.spring.FirstSpring;
 
 public class MergeSort implements Sort {
 
@@ -90,12 +76,13 @@ public class MergeSort implements Sort {
 ---------------------------------------------------------------
 QuickSort.java
 ---------------------------------------------------------------
-package com.kk.FirstSpring;
+package com.spring.FirstSpring;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class QuickSort implements Sort{
 
 	@Override
@@ -113,7 +100,7 @@ public class QuickSort implements Sort{
 ---------------------------------------------------------------
 Sort.java
 ---------------------------------------------------------------
-package com.kk.FirstSpring;
+package com.spring.FirstSpring;
 
 public interface Sort {
 
@@ -126,7 +113,7 @@ public interface Sort {
 ---------------------------------------------------------------
 src\main\resources\application.properties
 ---------------------------------------------------------------
-logging.level.com.kk.FirstSpring=DEBUG
+logging.level.com.spring.FirstSpring=DEBUG
 ---------------------------------------------------------------
 
 
