@@ -37,12 +37,15 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String loginPost(ModelMap model,@RequestParam String name){
+		@RequestMapping(value="/login", method = RequestMethod.POST)
+	public String loginPost(ModelMap model,@RequestParam String name,@RequestParam String password){
 		
 		model.put("name", name);
 		
-		return "welcome";
+		if(password.equals("Kavita"))
+			return "welcome";
+		else
+			return "Password is incorrect!";
 	}
 }
 
