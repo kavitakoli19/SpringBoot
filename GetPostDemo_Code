@@ -93,6 +93,6 @@ src\main\webapp\WEB-INF\jsp\welcome.jsp
 <title>Welcome Page</title>
 </head>
 <body>
-welcome</body>
+welcome ${name}</body>
 </html>
 -----------------------------------------------------
