@@ -1,0 +1,187 @@
+---------------------------------------------------------------
+BinarySearchImplmention.java
+---------------------------------------------------------------
+package com.kk.FirstSpring;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class BinarySearchImplmention {
+	
+	@Autowired
+	private Sort sort;
+	
+	/*public BinarySearchImplmention(Sort sort) {
+		this.sort = sort;
+	}*/
+	
+	
+	public void setSort(Sort sort) {
+		this.sort = sort;
+	}
+
+	public int binarySearch(int[] numberArray,int numberToSearch) {
+		int index = 4;
+		
+		numberArray = this.sort.sorting(numberArray);
+		
+		
+		
+		return index;
+	}
+
+}
+
+---------------------------------------------------------------
+
+
+
+---------------------------------------------------------------
+FirstSpringApplication.java
+---------------------------------------------------------------
+package com.kk.FirstSpring;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+
+public class FirstSpringApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ApplContext = SpringApplication.run(FirstSpringApplication.class, args);
+		
+		BinarySearchImplmention binarySearchImpl = ApplContext.getBean(BinarySearchImplmention.class);
+		
+		
+		int index = binarySearchImpl.binarySearch(new int[]{4,5,6,5}, 5);
+		System.out.println("Answer : "+index);
+		
+		
+		//BinarySearchImplmention bsi = new BinarySearchImplmention(new MergeSort());
+		//System.out.println("Answer"+bsi.binarySearch(new int[]{4,5,6,5}, 5));
+		
+	}
+
+}
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+MergeSort.java
+---------------------------------------------------------------
+package com.kk.FirstSpring;
+
+public class MergeSort implements Sort {
+
+	@Override
+	public int[] sorting(int[] numberArray) {
+		System.out.println("Merge sort");
+		return numberArray;
+	}
+
+}
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+QuickSort.java
+---------------------------------------------------------------
+package com.kk.FirstSpring;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+public class QuickSort implements Sort{
+
+	@Override
+	public int[] sorting(int[] numberArray) {
+		System.out.println("quick sort");
+		return numberArray;
+	}
+
+}
+
+---------------------------------------------------------------
+
+
+
+---------------------------------------------------------------
+Sort.java
+---------------------------------------------------------------
+package com.kk.FirstSpring;
+
+public interface Sort {
+
+	public int[] sorting(int[] numberArray);
+}
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+src\main\resources\application.properties
+---------------------------------------------------------------
+logging.level.com.kk.FirstSpring=DEBUG
+---------------------------------------------------------------
+
+
+
+---------------------------------------------------------------
+pom.xml
+---------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.kk</groupId>
+	<artifactId>FirstSpring</artifactId>
+	<version>0.0.1-SNAPSHOT</version> 
+	<name>FirstSpring</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
+---------------------------------------------------------------
