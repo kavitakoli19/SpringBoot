@@ -141,10 +141,10 @@ package com.example.demo.web.service;
 	    private static int todoCount = 3;
 
 	    static {
-	        todos.add(new Todo(1, "Annonimous", "Learn Spring MVC", new Date(),
+	        todos.add(new Todo(1, "Anonymous", "Learn Spring MVC", new Date(),
 	                false));
-	        todos.add(new Todo(2, "Annonimous", "Learn Struts", new Date(), false));
-	        todos.add(new Todo(3, "Annonimous", "Learn Hibernate", new Date(),
+	        todos.add(new Todo(2, "Anonymous", "Learn Struts", new Date(), false));
+	        todos.add(new Todo(3, "Anonymous", "Learn Hibernate", new Date(),
 	                false));
 	    }
 
@@ -182,6 +182,13 @@ package com.example.demo.web.service;
 TodoController.java
 ------------------------------------------------------------------
 
+/**
+ * 
+ */
+/**
+ * @author 703207082
+ *
+ */
 package com.example.demo.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -204,6 +211,8 @@ public class TodoController {
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(ModelMap model){
 		
+	//	model.put("nameFirst", name);
+		
 		return "login";
 	}
 	
@@ -214,7 +223,7 @@ public class TodoController {
 		
 		model.put("name", name);
 		
-		if(password.equals("Annonimous"))
+		if(password.equals("Anonymous"))
 			return "welcome";
 		else
 			return "error";
@@ -231,7 +240,25 @@ public class TodoController {
 		return "list-todos";		
 		
 	}
+	
+	@RequestMapping(value="/addtodo",method = RequestMethod.POST)
+	public String addTodoPost(ModelMap model,@RequestParam String desc) {
+		
+		service.addTodo((String)model.get("name"), desc, new java.util.Date(), false);
+		
+		return "redirect:/list-todos";		
+		
+	}
+	
+	@RequestMapping(value="/addtodo",method = RequestMethod.GET)
+	public String addToDoGet(ModelMap model) {
+		
+		return "addtodo";		
+		
+	}
+	
 }
+
 
 ------------------------------------------------------------------
 
@@ -316,8 +343,38 @@ src\main\webapp\WEB-INF\jsp\list-todos.jsp
 <title>Welcome Page</title>
 </head>
 <body>
-list of to dos : ${todos}
-<Br>Your name : ${name}
+
+
+list of ${name}'s to dos :
+ ${todos}.
+ 
+ <br/>
+ 
+ <a href="/addtodo"> Add a to do </a> 
+ 
+</body>
+</html>
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+src\main\webapp\WEB-INF\jsp\addodos.jsp
+------------------------------------------------------------------
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add To DO page</title>
+</head>
+<body>
+
+<form method="post">
+	Description : <input name = "desc" type ="text"/> 
+	<input type = "submit" />
+</form>
 </body>
 </html>
 ------------------------------------------------------------------
