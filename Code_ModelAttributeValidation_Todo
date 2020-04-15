@@ -54,7 +54,7 @@ public class TodoController {
 		
 		model.put("name", name);
 		
-		if(password.equals("Kavita"))
+		if(password.equals("Anonymous"))
 			return "welcome";
 		else
 			return "error";
@@ -109,13 +109,7 @@ public class TodoController {
 Todo.java
 -------------------------------------------------
 
-/**
- * 
- */
-/**
- * @author 703207082
- *
- */
+
 package com.example.demo.web.model;
 
 import java.util.Date;
