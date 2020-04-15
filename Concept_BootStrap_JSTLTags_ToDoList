@@ -1,11 +1,6 @@
- 1. Add bootstrap to give basic formatting to the page : We use bootstrap classes container,table and table-striped.
- 2. We will use webjars
- 3. Already auto configured by Spring Boot : o.s.w.s.handler.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler 
-     of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-     
-     
-     
-   Web jars Dependancies :: 
+ A. Bootstrap Settings:: 
+ 
+   a. Web jars Dependancies ::  Add to pom.xml
    
      <dependency>
             <groupId>org.webjars</groupId>
@@ -17,21 +12,22 @@
             <artifactId>jquery</artifactId>
             <version>1.9.1</version>
         </dependency>
-        
-  		
+           
       
-      
-     For Adding to JSP pages : 
+   b. Add to JSP pages :: 
      
-     Add this in the begining of JSP File : 
+    	1. Add this, in the begining of JSP File :: 
      
-     <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	    		rel="stylesheet">
+     		<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
           
-          
-     Add this to end of the JSP File :
+        2. Add this, to end of the JSP File ::
      
 		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-	  <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		
+		
+		
+B. In this example we are creating a TODOs list for a user and updating it with add and delete operations.
+
+a. 
  
