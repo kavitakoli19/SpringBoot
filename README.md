@@ -30,3 +30,9 @@ Spring Boot concepts
    - com.in28min.springboot.web.service : keep classes using the defined structure to implement business logic
    - com.in28min.springboot.web.model  : Keep classes defining struture 
   
+# Course Details :
+  - Link : https://www.udemy.com/course/spring-boot-tutorial-for-beginners
+
+- Git Repos ::
+  - https://github.com/in28minutes/SpringBootWebApplicationStepByStep
+  - https://github.com/in28minutes/spring-boot-master-class
