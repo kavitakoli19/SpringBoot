@@ -45,16 +45,16 @@
   - URL is matched with the value given in @RequestMapping,to identify its mapping for this request. 
     - value attribute can have multiple values as well ex. @RequestMapping(value={"", "/page", "page*","view/*,**/msg"})
     - This will map to all below URLs
-       -localhost:8080/home
-       -localhost:8080/home/
-       -localhost:8080/home/page
-       -localhost:8080/home/pageabc
-       -localhost:8080/home/view/
-       -localhost:8080/home/view/view
-  - @ResponseBody will return as string which will be shown directly as a web page content.
+       - localhost:8080/home
+       - localhost:8080/home/
+       - localhost:8080/home/page
+       - localhost:8080/home/pageabc
+       - localhost:8080/home/view/
+       - localhost:8080/home/view/view
+  - @ResponseBody will return a string which will be shown directly as a web page content.
 
 # src\main\resources\application.properties
-  - We can change logging level for any project with syntax "logging.level.name_of_the_package = debug"
+  - We can change logging level for any package with syntax "logging.level.name_of_the_package = debug"
 ```
 logging.level.org.springframework.web=DEBUG
 ```
