@@ -67,3 +67,7 @@ logging.level.org.springframework.web=DEBUG
   - @RequestMapping :: Marks methods of MVC and REST controllers as handler to HTTP requests. Can be used on a class or a method.
   - @ResponseBody :: Annotation that indicates a method return value should be bound to the web response body. Supported for annotated handler methods
  
+
+# How to execute
+ - Run the main application
+ - hit URL http://localhost:8080/login
