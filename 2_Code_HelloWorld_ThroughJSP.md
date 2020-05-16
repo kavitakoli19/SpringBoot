@@ -1,7 +1,6 @@
----------------------------------------------
-SecondApplication.java
----------------------------------------------
+# SecondApplication.java
 
+```
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,12 +12,10 @@ public class SecondApplication {
 	}
 
 }
----------------------------------------------
+```
 
-
----------------------------------------------
-LoginController.java
----------------------------------------------
+# LoginController.java
+```
 package com.example.rerun2.Second.controller;
 
 import org.springframework.stereotype.Controller;
@@ -38,21 +35,20 @@ public class LoginController {
 		return "login";
 	}
 }
----------------------------------------------
+```
 
 
----------------------------------------------
-src\main\resources\application.properties
----------------------------------------------
+# src\main\resources\application.properties
+
+```
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.org.springframework.web=DEBUG
----------------------------------------------
+```
 
 
----------------------------------------------
-src\main\webapp\WEB-INF\jsp\login.jsp
----------------------------------------------
+# src\main\webapp\WEB-INF\jsp\login.jsp
+```
 <html>
 
 <head>
@@ -64,13 +60,11 @@ My First JSP!! Welcome ${name}!
 </body>
 
 </html>
----------------------------------------------
+```
 
+# pom.xml
 
-
----------------------------------------------
-pom.xml
----------------------------------------------
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -133,6 +127,4 @@ pom.xml
 	</build>
 
 </project>
-
----------------------------------------------
-
+```
