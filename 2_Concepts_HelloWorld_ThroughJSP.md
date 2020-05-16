@@ -13,7 +13,7 @@
       - spring.mvc.view.prefix=/WEB-INF/jsp/ :: where to look for UI pages/classes.
       - spring.mvc.view.suffix=.jsp  :: what is the extension to suffix with.
   - Added a JSP page at above mentioned location
-      - In this page attribute which was added to mdelMap with supplied name "name" is referred with belw syntax
+      - In this page attribute which was added to modelMap with supplied name "name" is referred with below syntax
         - ${name}
   
    
@@ -22,7 +22,12 @@
  
  # Annotations ::
   - ModelMap : Used in Building model data for use with UI tools. Supports chained calls and generation of model attribute names.
-  - @RequestParam : 
+  - @RequestParam : @RequestParam is a Spring annotation used to bind a web request parameter to a method parameter.
+							       has the following optional elements:
+								- defaultValue - used as a fallback when the request parameter is not provided or has an empty value
+								- name - name of the request parameter to bind to
+								- required - tells whether the parameter is required
+								- value - alias for name
   
   
   # How to execute :: 
