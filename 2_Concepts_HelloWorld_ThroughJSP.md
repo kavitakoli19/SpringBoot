@@ -1,4 +1,4 @@
-N# Concept ::
+# Concept ::
   - In earlier application we seen mapping a URL to a @RequestMapping and returning a response in the form of a String
   as a web page body with the help of @ResponseBody annotation.
   - In this application we will see how to retun a JSP page as a reponse to the URL request.
