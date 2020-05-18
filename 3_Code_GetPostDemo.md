@@ -1,6 +1,5 @@
------------------------------------------------------
-MvcArgPassingApplication.java
------------------------------------------------------
+# MvcArgPassingApplication.java
+```
 package com.spring.training.MVCArgPassing;
 
 import org.springframework.boot.SpringApplication;
@@ -13,14 +12,10 @@ public class MvcArgPassingApplication {
 		SpringApplication.run(MvcArgPassingApplication.class, args);
 	}
 }
------------------------------------------------------
+```
 
-
-
-
------------------------------------------------------
-LoginController.java
------------------------------------------------------
+# LoginController.java
+```
 package com.spring.training.MVCArgPassing.Controller;
 
 import org.springframework.stereotype.Controller;
@@ -48,23 +43,17 @@ public class LoginController {
 			return "error";
 	}
 }
+```
 
------------------------------------------------------
-
-
-
------------------------------------------------------
-src\main\resources\application.properties
------------------------------------------------------
+# src\main\resources\application.properties
+```
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.spring.framework.web=debug
------------------------------------------------------
+```
 
-
------------------------------------------------------
-src\main\webapp\WEB-INF\jsp\login.jsp
------------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\login.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -81,12 +70,10 @@ src\main\webapp\WEB-INF\jsp\login.jsp
 	</form>
 </body>
 </html>
------------------------------------------------------
+```
 
-
------------------------------------------------------
-src\main\webapp\WEB-INF\jsp\welcome.jsp
------------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\welcome.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -98,12 +85,10 @@ src\main\webapp\WEB-INF\jsp\welcome.jsp
 <body>
 welcome ${name}</body>
 </html>
------------------------------------------------------
+```
 
-
------------------------------------------------------
-\src\main\webapp\WEB-INF\jsp\error.jsp
------------------------------------------------------
+# \src\main\webapp\WEB-INF\jsp\error.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -116,6 +101,5 @@ welcome ${name}</body>
 Something went wrong!
  </body>
 </html>
------------------------------------------------------
-
+```
 
