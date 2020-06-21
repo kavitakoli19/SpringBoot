@@ -1,5 +1,5 @@
 
-A. Scope of a requestParam::
+# Scope of a requestParam::
 
   a. In any request the requestParams we receive lasts for that request only.
   b. So requestParam that we add in ModelMap can be accessible only within the same request.
