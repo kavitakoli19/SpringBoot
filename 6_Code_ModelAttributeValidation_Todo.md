@@ -1,6 +1,5 @@
--------------------------------------------------
-DemoApplication.java
--------------------------------------------------
+# DemoApplication.java
+```
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -13,11 +12,10 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 }
--------------------------------------------------
+```
 
--------------------------------------------------
-TodoController.java
--------------------------------------------------
+# TodoController.java
+```
 package com.example.demo.web.controller;
 
 import javax.validation.Valid;
@@ -102,14 +100,10 @@ public class TodoController {
 	}	
 }
 
--------------------------------------------------
+```
 
-
--------------------------------------------------
-Todo.java
--------------------------------------------------
-
-
+# Todo.java
+```
 package com.example.demo.web.model;
 
 import java.util.Date;
@@ -217,12 +211,10 @@ public class Todo {
     }
 
 }
--------------------------------------------------
+```
 
-
--------------------------------------------------
-TodoService.java
--------------------------------------------------
+# TodoService.java
+```
 package com.example.demo.web.service;
 
 	import java.util.ArrayList;
@@ -273,20 +265,17 @@ package com.example.demo.web.service;
 	    }
 	}
 
--------------------------------------------------
+```
 
--------------------------------------------------
-src\main\resources\application.properties
--------------------------------------------------
+# src\main\resources\application.properties
+```
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.spring.framework.web=debug
--------------------------------------------------
+```
 
-
--------------------------------------------------
-src\main\webapp\WEB-INF\jsp\addtodo.jsp
--------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\addtodo.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -326,12 +315,10 @@ src\main\webapp\WEB-INF\jsp\addtodo.jsp
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
--------------------------------------------------
+```
 
-
--------------------------------------------------
-src\main\webapp\WEB-INF\jsp\error.jsp
--------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\error.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -344,13 +331,10 @@ src\main\webapp\WEB-INF\jsp\error.jsp
 Something went wrong!
  </body>
 </html>
--------------------------------------------------
+```
 
-
--------------------------------------------------
-src\main\webapp\WEB-INF\jsp\list-todos.jsp
--------------------------------------------------
-
+# src\main\webapp\WEB-INF\jsp\list-todos.jsp
+```
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
@@ -406,11 +390,10 @@ Also al vaues are private stil it worked. </H3>
 
 </body>
 </html>
--------------------------------------------------
+```
 
--------------------------------------------------
-src\main\webapp\WEB-INF\jsp\login.jsp
--------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\login.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -427,13 +410,11 @@ src\main\webapp\WEB-INF\jsp\login.jsp
 	</form>
 </body>
 </html>
--------------------------------------------------
+```
 
 
-
--------------------------------------------------
-src\main\webapp\WEB-INF\jsp\welcome.jsp
--------------------------------------------------
+# src\main\webapp\WEB-INF\jsp\welcome.jsp
+```
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -446,11 +427,10 @@ src\main\webapp\WEB-INF\jsp\welcome.jsp
 welcome ${name} <a href ="/list-todos"> Click here</a> to manage to dos.
 </body>
 </html>
--------------------------------------------------
+```
 
--------------------------------------------------
-pom.xml
--------------------------------------------------
+# pom.xml
+``` 
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -543,5 +523,4 @@ pom.xml
 
 </project>
 
--------------------------------------------------
-
+```
